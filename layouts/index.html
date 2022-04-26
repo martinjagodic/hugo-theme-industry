@@ -21,15 +21,6 @@
       {{ partial "home/testimonies" . }}
     {{ end }}
 
-    {{ if .Params.machinery }}
-      {{ with .Site.GetPage "machinery" }}
-        {{ partial "home/machinery" (dict
-          "params" $.Params.machinery
-          "items" (first 6 .Pages)
-        ) }}
-      {{ end }}
-    {{ end }}
-
     {{ with .Params.partners }}
       {{ partial "home/partners" . }}
     {{ end }}

@@ -93,30 +93,6 @@
     }
   }
 
-  &--altering {
-    margin: calc(4 * var(--p-margin)) 0;
-
-    @include breakpoint-down('sm') {
-      #{$self}__image,
-      #{$self}__text {
-        order: initial !important;
-      }
-    }
-
-    @include breakpoint-up('sm') {
-      display: grid;
-      grid-template-columns: repeat($columns-count, 1fr);
-
-      #{$self}__text {
-        padding: 20px var(--container-padding);
-
-        &.order-1 {
-          text-align: right;
-        }
-      }
-    }
-  }
-
   &--quote {
     h4 {
       text-transform: none;
