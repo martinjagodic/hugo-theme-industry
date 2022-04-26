@@ -1,0 +1,16 @@
+{
+  "en": {
+    "title": "Wanna know more?",
+    "button": {
+      "text": "Contact us",
+      "href": "/en/contact"
+    }
+  },
+  "de": {
+    "title": "Willst du mehr wissen?",
+    "button": {
+      "text": "Kontaktiere uns",
+      "href": "/de/kontakt"
+    }
+  }
+}

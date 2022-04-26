@@ -1,0 +1,27 @@
+{{ $data := index .Site.Data.footer }}
+{{ $data = index $data .Page.Language.Lang }}
+
+<footer class="footer">
+  <div class="container grid">
+    <div class="col-12 col-md-3">
+      <a
+        href="{{ .Site.Home.RelPermalink }}"
+        title="{{ .Site.Home.Title }}"
+        class="footer__logo">
+        <img src="/media/brand/logo.png" alt="{{ .Site.Title }}" height="100" width="190">
+      </a>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <nav class="footer__menu">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+
+    <div class="col-12 col-md-3 footer__copyright">
+      © {{ dateFormat "2006" now }} {{ $data.copyright }}
+    </div>
+  </div>
+</footer>

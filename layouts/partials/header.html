@@ -1,0 +1,12 @@
+<header class="header">
+  <a
+    href="{{ .Site.Home.RelPermalink }}"
+    title="{{ .Site.Home.Title }}"
+    class="header__logo">
+    <img src="/media/brand/logo.png" alt="{{ .Site.Title }}" width="114" height="60">
+  </a>
+
+  {{ partial "quick-info" . }}
+  {{ partial "lang-switch" . }}
+  {{ partial "main-menu" . }}
+</header>

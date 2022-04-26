@@ -1,0 +1,23 @@
+[ name ]
+other = "Name"
+
+[ email ]
+other = "Email"
+
+[ file ]
+other = "Datei"
+
+[ message ]
+other = "Nachricht"
+
+[ terms ]
+other = "Strinjam se s politiko zasebnosti"
+
+[ submit ]
+other = "Einreichen"
+
+[ people ]
+other = "Wer wir sind"
+
+[ more ]
+other = "Mehr"

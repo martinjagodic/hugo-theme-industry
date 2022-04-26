@@ -1,0 +1,19 @@
+<div class="page-hero">
+  <div class="grid">
+    <div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 col-xxl-6 offset-xxl-3">
+      <h1 class="no-margin-bottom">{{ .Title }}</h1>
+    </div>
+
+    {{ if .Params.image }}
+      <div class="col-12 col-lg-10 offset-lg-1 col-xxl-8 offset-xxl-2">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="page-image">
+      </div>
+    {{ end }}
+
+    {{ with .Description }}
+      <div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 col-xxl-6 offset-xxl-3">
+        <p class="large-text no-margin">{{ . }}</p>
+      </div>
+    {{ end }}
+  </div>
+</div>

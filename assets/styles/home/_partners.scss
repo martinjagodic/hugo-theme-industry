@@ -1,0 +1,10 @@
+.home-partners {
+  border-top: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,79 @@
+.lang-switch {
+  position: relative;
+  z-index: 20;
+  margin-left: auto;
+  text-transform: uppercase;
+  font-size: 16px;
+
+  @include breakpoint-up('md') {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    font-size: 20px;
+  }
+
+  ul {
+    position: absolute;
+    right: 0;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: $color-black;
+    color: $color-white;
+    text-align: center;
+  }
+
+  a {
+    padding: 16px;
+    display: block;
+    flex-grow: 1;
+    color: inherit;
+    border-top: 1px solid currentColor;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: lighten($color-black, 20);
+    }
+  }
+
+  &__button {
+    height: 100%;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0 var(--container-padding);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: $color-black;
+    color: $color-white;
+    transition: background 0.3s ease;
+
+    @include breakpoint-down('md') {
+      gap: 4px;
+    }
+
+    &:hover {
+      background: lighten($color-black, 20);
+    }
+
+    .feather {
+      transition: transform 0.3s ease;
+    }
+
+    &[aria-expanded="false"] + ul {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      background: lighten($color-black, 20);
+
+      .feather {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

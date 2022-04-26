@@ -1,0 +1,57 @@
+{{ $ogDesc := .Site.Params.description }}
+{{ with .Description }}
+  {{ $ogDesc = . }}
+{{ end }}
+
+{{ $ogImage := .Site.Params.image }}
+{{ with .Params.image }}
+  {{ $ogImage = . }}
+{{ end }}
+
+{{ $title := print .Title " | " .Site.Title }}
+{{ if .IsHome }}
+  {{ $title = .Site.Title }}
+{{ end }}
+
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/x-icon">
+
+  <!-- Primary Meta Tags -->
+  <title>{{ $title }}</title>
+  <meta name="description" content="{{ $ogDesc }}">
+  <meta name="theme-color" content="#f80">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .RelPermalink }}">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $ogDesc }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ $ogImage }}">
+
+  {{ partial "base/styles" . }}
+
+  {{ template "_internal/google_analytics.html" . }}
+
+</head>
+
+
+<body>
+  {{ partialCached "base/unsupported-browser" . }}
+
+  {{ partial "header" . }}
+
+  {{ block "main" . }}{{ end }}
+
+  {{ partial "footer" . }}
+
+  {{ partial "cookies" . }}
+
+  {{ partial "base/scripts" . }}
+</body>
+</html>

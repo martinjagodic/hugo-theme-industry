@@ -1,0 +1,17 @@
+{{ $thisPage := . }}
+
+<nav class="main-menu" role="navigation">
+  <button class="menu-button" aria-expanded="false" aria-controls="main-menu">
+    <i data-feather="menu"></i>
+    <i data-feather="x"></i>
+  </button>
+
+  <ul id="main-menu">
+    {{ range .Site.Menus.main }}
+      {{ $active := or ($thisPage.IsMenuCurrent "main" .) ($thisPage.HasMenuCurrent "main" .) }}
+      <li>
+        <a href="{{ .URL }}" class="{{ if $active }}active{{ end }}">{{ .Name }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>

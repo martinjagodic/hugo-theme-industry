@@ -1,0 +1,38 @@
+{{ $isFirstCardExtra := .isFirstCardExtra }}
+{{ $cardClass := .cardClass }}
+{{ $cardPartial := "card" }}
+{{ with .cardPartial }}
+  {{ $cardPartial = . }}
+{{ end }}
+
+<div class="card-slider container no-padding-sm-down swiper">
+  <div class="card-slider__header">
+    <h2 class="no-margin">{{ .title }}</h2>
+    <div class="card-slider__navigation">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <div class="swiper-wrapper">
+    {{ range $i, $el := .items }}
+      <div class="swiper-slide">
+        {{ $class := cond (ne $cardClass nil) $cardClass "" }}
+        {{ if (and (eq $i 0) $isFirstCardExtra) }}
+          {{ $class = print $cardClass " card--extra" }}
+        {{ end }}
+
+        {{ partial $cardPartial (dict
+          "context" .
+          "class" $class
+        ) }}
+      </div>
+    {{ end }}
+  </div>
+
+  {{ with .button }}
+    <div class="card-slider__footer">
+      <a href="{{ .href }}" class="button button--orange">{{ .text }}</a>
+    </div>
+  {{ end }}
+</div>

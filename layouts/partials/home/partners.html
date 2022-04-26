@@ -1,0 +1,15 @@
+<section class="home-partners section-margin section-padding">
+  <div class="container">
+    <h2 class="text-center no-margin-top">{{ .title }}</h2>
+
+    <div class="grid swiper">
+      <div class="swiper-wrapper">
+        {{ range .items }}
+          <div class="swiper-slide">
+            <img src="{{ .image }}" alt="{{ .name }}">
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

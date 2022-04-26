@@ -1,0 +1,10 @@
+{{ $href := .Get "href" }}
+{{ $target := .Get "target" }}
+{{ $class := .Get "class" }}
+
+<a
+  {{ with $href }} href="{{ . }}" {{ end }}
+  {{ with $target }} target="{{ . }}" {{ end }}
+  class="button {{ with $class }}{{ . }}{{ end }}">
+  {{ .Inner }}
+</a>

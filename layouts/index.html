@@ -1,0 +1,48 @@
+{{ define "main" }}
+  <main>
+    {{ with .Params.hero }}
+      {{ partial "home/hero" . }}
+    {{ end }}
+
+    {{ if .Params.services }}
+      {{ with .Site.GetPage "services" }}
+        {{ partial "home/services" (dict
+          "params" $.Params.services
+          "items" .Pages
+        ) }}
+      {{ end }}
+    {{ end }}
+
+    {{ with .Params.benefits }}
+      {{ partial "home/benefits" . }}
+    {{ end }}
+
+    {{ with .Params.testimonies }}
+      {{ partial "home/testimonies" . }}
+    {{ end }}
+
+    {{ if .Params.machinery }}
+      {{ with .Site.GetPage "machinery" }}
+        {{ partial "home/machinery" (dict
+          "params" $.Params.machinery
+          "items" (first 6 .Pages)
+        ) }}
+      {{ end }}
+    {{ end }}
+
+    {{ with .Params.partners }}
+      {{ partial "home/partners" . }}
+    {{ end }}
+
+    {{ if .Params.blog }}
+      {{ with .Site.GetPage "blog" }}
+        {{ partial "home/blog" (dict
+          "params" $.Params.blog
+          "items" (first 3 .Pages)
+        ) }}
+      {{ end }}
+    {{ end }}
+  </main>
+
+  {{ partialCached "contact-banner" . }}
+{{ end }}

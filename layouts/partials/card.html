@@ -1,0 +1,45 @@
+<article class="card {{ .class }}">
+  {{ if .context.Params.image }}
+    <a {{ if not .hideButton }}href="{{ .context.RelPermalink }}"{{ end }} class="card__image">
+      <img src="{{ .context.Params.image }}" alt="{{ .context.Title }}">
+
+      {{ if eq .class "card--hover" }}
+        {{ template "card__hover" .context.Params }}
+      {{ end }}
+    </a>
+  {{ end }}
+
+  <div class="card__text">
+    <h4>
+      <a {{ if not .hideButton }}href="{{ .context.RelPermalink }}"{{ end }}>{{ .context.Title }}</a>
+    </h4>
+
+    <p>{{ .context.Description }}</p>
+
+    {{ with .context.Params.email }}
+      <p>
+        <a href="mailto:{{ . }}">{{ . }}</a>
+      </p>
+    {{ end }}
+
+    {{ with .context.Params.phone }}
+      <p>
+        <a href="tel:{{ . }}">{{ . }}</a>
+      </p>
+    {{ end }}
+
+    {{ if not .hideButton }}
+      <a href="{{ .context.RelPermalink }}" class="button button--tertiary no-margin">{{ T "more" }}</a>
+    {{ end }}
+  </div>
+</article>
+
+{{ define "card__hover" }}
+  <div class="card__hover">
+    {{ with .numberOfAxes }}<p>{{ T "numberOfAxes" }}: {{ . }}</p>{{ end }}
+    {{ with .maxXAxis }}<p>{{ T "maxXAxis" }}: {{ . }}</p>{{ end }}
+    {{ with .maxYAxis }}<p>{{ T "maxYAxis" }}: {{ . }}</p>{{ end }}
+    {{ with .maxZAxis }}<p>{{ T "maxZAxis" }}: {{ . }}</p>{{ end }}
+    {{ with .maxSindleSpeed }}<p>{{ T "maxSindleSpeed" }}: {{ . }}</p>{{ end }}
+  </div>
+{{ end }}

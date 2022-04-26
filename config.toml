@@ -1,0 +1,43 @@
+title = "Industry - A Hugo Theme"
+googleAnalytics = ""
+disableFastRender = true
+languageCode = "en-en"
+defaultContentLanguage = "en"
+
+[params]
+description = "A fast and responsive Hugo theme"
+phone = "+01 23 456 789"
+email = "info@company.com"
+address = "Some Street 123, 12345 City"
+mapUrl = "https://goo.gl/maps/GgJznHazfQwDKAaC9"
+
+[params.breakpoints]
+  xs = 576
+  sm = 768
+  md = 992
+  lg = 1200
+  xl = 1440
+  xxl = 1680
+  xxxl = 1920
+
+[markup]
+
+[markup.goldmark]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[languages]
+
+[languages.en]
+languageName = "English"
+languageCode = "en"
+weight = 2
+
+[languages.de]
+languageName = "German"
+languageCode = "de"
+weight = 3
+
+[languages.de.params]
+description = "Ein schnelles und responsives Hugo-Thema"

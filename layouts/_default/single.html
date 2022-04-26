@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <main>
+    <div class="container">
+      {{ partial "page-hero" . }}
+
+      <div class="grid">
+        <div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 col-xxl-6 offset-xxl-3">
+          {{ .Content | safeHTML }}
+        </div>
+      </div>
+    </div>
+    {{ if .Params.showContactBanner }}
+      {{ partialCached "contact-banner" . }}
+    {{ end }}
+  </main>
+
+  {{ partialCached "contact-banner" . }}
+{{ end }}

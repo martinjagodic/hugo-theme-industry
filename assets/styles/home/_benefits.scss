@@ -1,0 +1,37 @@
+.home-benefits {
+  background-color: rgba($color-black, 0.6);
+  color: $color-white;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    font-size: clamp(20px, 4vw, 24px);
+
+    @include breakpoint-up('xs') {
+      columns: 2;
+    }
+
+    @include breakpoint-up('md') {
+      columns: 3;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 8px 0;
+    }
+  }
+}

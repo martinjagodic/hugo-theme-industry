@@ -1,0 +1,14 @@
+.contact-banner {
+  background: $color-grey;
+  color: $color-white;
+  padding: var(--section-margin);
+  margin-top: calc(2 * var(--section-margin));
+
+  h2 {
+    margin: 0 0 var(--p-margin);
+  }
+
+  + .footer {
+    margin-top: 0;
+  }
+}

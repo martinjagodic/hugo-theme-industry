@@ -1,0 +1,15 @@
+<article class="card card--quote {{ .class }}">
+  {{ if .context.image }}
+    <img src="{{ .context.image }}" alt="{{ .context.name }}">
+  {{ end }}
+
+  <div class="card__text">
+
+    <p>{{ .context.text }}</p>
+
+    <h4 class="no-margin-bottom">{{ .context.name }}</h4>
+    {{ with .context.company }}
+      <p class="card__company no-margin">{{ . }}</p>
+    {{ end }}
+  </div>
+</article>

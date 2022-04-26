@@ -1,0 +1,42 @@
+.card-slider {
+  --swiper-navigation-color: #000;
+  --swiper-navigation-size: clamp(28px, 5.6vw, 40px);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calc(var(--p-margin) * 2);
+
+    @include breakpoint-down('sm') {
+      padding: 0 var(--container-padding);
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: clamp(20px, 4vw, 32px);
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    margin-top: auto;
+  }
+
+  &__footer {
+    margin-top: calc(var(--p-margin) * 2);
+    text-align: center;
+
+    @include breakpoint-down('sm') {
+      padding: 0 var(--container-padding);
+    }
+  }
+}

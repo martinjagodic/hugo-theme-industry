@@ -1,0 +1,31 @@
+{{ $isOdd := (modBool $.index 2) }}
+
+<article class="card card--altering {{ .class }}">
+  {{ with .context.Params.image }}
+    <a
+      href="{{ $.context.RelPermalink }}"
+      class="card__image col-sm-5 order-{{ cond $isOdd "1" "2" }}">
+      <img src="{{ . }}" alt="{{ $.context.Title }}">
+    </a>
+  {{ end }}
+
+  <div class="card__text col-sm-7 order-{{ cond $isOdd "2" "1" }}">
+    <h4>
+      <a href="{{ .context.RelPermalink }}">{{ .context.Title }}</a>
+    </h4>
+
+    <p>{{ .context.Description }}</p>
+
+    {{ with .context.Params }}
+      <div class="is-hidden-sm-down">
+        {{ with .numberOfAxes }}<p>{{ T "numberOfAxes" }}: {{ . }}</p>{{ end }}
+        {{ with .maxXAxis }}<p>{{ T "maxXAxis" }}: {{ . }}</p>{{ end }}
+        {{ with .maxYAxis }}<p>{{ T "maxYAxis" }}: {{ . }}</p>{{ end }}
+        {{ with .maxZAxis }}<p>{{ T "maxZAxis" }}: {{ . }}</p>{{ end }}
+        {{ with .maxSindleSpeed }}<p>{{ T "maxSindleSpeed" }}: {{ . }}</p>{{ end }}
+      </div>
+    {{ end }}
+
+    <a href="{{ .context.RelPermalink }}" class="button button--tertiary no-margin">{{ T "more" }}</a>
+  </div>
+</article>

@@ -1,0 +1,134 @@
+.card {
+  --p-margin: clamp(8px, 1.6vw, 12px);
+  $self: &;
+
+  font-size: clamp(18px, 3.6vw, 20px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-grey-light;
+
+  h4 {
+    font-size: clamp(20px, 4vw, 24px);
+    margin: var(--p-margin) 0;
+
+    a {
+      border-bottom: none;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-bottom: none;
+    display: block;
+    position: relative;
+    padding-bottom: 75%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__hover {
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black, 0.6);
+    color: $color-white;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    transition: opacity 0.3s ease-in;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    background: $color-grey-light;
+    padding: 12px 20px 20px;
+    flex-grow: 1;
+  }
+
+  &__company {
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-size: clamp(12px, 2.4vw, 16px);
+  }
+
+  .button {
+    margin: var(--p-margin) 0;
+  }
+
+  &--extra {
+    #{$self}__text {
+      background: $color-orange;
+      color: $color-white;
+
+      a {
+        color: $color-white;
+        border-bottom-color: $color-black;
+      }
+    }
+  }
+
+  &--wide {
+    @include breakpoint-up('md') {
+      flex-direction: row;
+
+      #{$self}__image {
+        padding-bottom: calc(100% / 3);
+      }
+    }
+  }
+
+  &--altering {
+    margin: calc(4 * var(--p-margin)) 0;
+
+    @include breakpoint-down('sm') {
+      #{$self}__image,
+      #{$self}__text {
+        order: initial !important;
+      }
+    }
+
+    @include breakpoint-up('sm') {
+      display: grid;
+      grid-template-columns: repeat($columns-count, 1fr);
+
+      #{$self}__text {
+        padding: 20px var(--container-padding);
+
+        &.order-1 {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &--quote {
+    h4 {
+      text-transform: none;
+      font-weight: 400;
+    }
+  }
+
+  &--hover {
+    &:hover {
+      #{$self}__hover {
+        opacity: 1;
+      }
+    }
+  }
+}

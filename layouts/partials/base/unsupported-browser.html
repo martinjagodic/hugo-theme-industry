@@ -1,0 +1,22 @@
+<div id="unsupported-browser"
+  style="display: none; padding: 48px 24px; text-align: center; height: 100%; width: 100%;">
+  <h3>Ta brskalnik ni podprt</h3>
+  <p>Prosimo, uporabite drug brskalnik, naprimer <a href="https://www.google.com/chrome/" rel="noopener">Google Chrome</a>.</p>
+</div>
+
+<script>
+  var supportsES6 = function () {
+    try {
+        new Promise(function (x, y) { });
+        new Function("(a = 0) => a");
+        return true;
+    }
+    catch (err) {
+        return false;
+    }
+  }();
+  if (!supportsES6) {
+    console.error('no ES6 support')
+    document.getElementById('unsupported-browser').style.display = 'block'
+  }
+</script>

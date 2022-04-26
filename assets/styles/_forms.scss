@@ -1,0 +1,32 @@
+input,
+textarea {
+  border: 1px solid $color-black;
+  padding: clamp(12px, 2.4vw, 16px);
+  background: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--p-margin);
+}
+
+.form-item {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  width: 100%;
+
+  &--checkbox {
+    flex-direction: row;
+
+    label {
+      order: 2;
+    }
+
+    input {
+      order: 1;
+    }
+  }
+}

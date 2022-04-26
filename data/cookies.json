@@ -1,0 +1,18 @@
+{
+  "en": {
+    "text": "This website uses cookies for its operation.",
+    "confirm": "I understand",
+    "more": {
+      "text": "More",
+      "href": "/en/cookies"
+    }
+  },
+  "de": {
+    "text": "Diese Website verwendet Cookies für den Betrieb.",
+    "confirm": "Ich verstehe",
+    "more": {
+      "text": "Mehr",
+      "href": "/de/cookies"
+    }
+  }
+}

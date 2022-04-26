@@ -1,0 +1,10 @@
+{
+  "en": {
+    "title": "404",
+    "description": "Page not found. Best go <a href=\"/en\">home</a>."
+  },
+  "de": {
+    "title": "404",
+    "description": "Seite nicht gefunden. Am besten nach <a href=\"/\">Hause</a> gehen."
+  }
+}

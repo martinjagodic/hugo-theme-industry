@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <main class="layout-kontakt grid">
+    <div class="col-12 col-sm-6 col-xl-7 layout-kontakt__map">
+      <div class="container">
+        <h1 class="no-margin">{{ .Title }}</h1>
+
+        <ul class="layout-kontakt__info">
+          <li>
+            <i data-feather="mail"></i>
+            <a href="mailto:{{ .Site.Params.email }}" target="_blank">{{ .Site.Params.email }}</a>
+          </li>
+          <li>
+            <i data-feather="phone"></i>
+            <a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+          </li>
+          <li>
+            <i data-feather="map-pin"></i>
+            <a href="{{ .Site.Params.mapUrl }}" target="_blank">{{ .Site.Params.address }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.550963044076!2d14.594831716002133!3d46.199493679116514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47654ba2e1dd977d%3A0xf9ab90010ece353e!2sOrodjarstvo%20MDM%20d.o.o.!5e0!3m2!1sen!2ssi!4v1646841141368!5m2!1sen!2ssi" width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="col-12 col-sm-6 col-xl-5 container layout-kontakt__content">
+      <p class="large-text">{{ .Description }}</p>
+      {{ partial "contact-form" . }}
+    </div>
+  </main>
+{{ end }}

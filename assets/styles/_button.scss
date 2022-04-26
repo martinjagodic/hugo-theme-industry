@@ -1,0 +1,52 @@
+.button {
+  font-size: 16px;
+  padding: clamp(12px, 2.4vw, 16px) clamp(32px, 6.4vw, 40px);
+  display: inline-block;
+  text-transform: uppercase;
+  border: 2px solid $color-black;
+  background: $color-black;
+  color: $color-white;
+  min-width: 160px;
+  text-align: center;
+  transition: background 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($color-black, 20);
+  }
+
+  &--secondary {
+    background: transparent;
+    color: $color-black;
+
+    &:hover {
+      background: darken($color-white, 5);
+    }
+  }
+
+  &--tertiary {
+    border: none;
+    background: none;
+    color: $color-black;
+    min-width: auto;
+    padding: 0 0 2px;
+    border-bottom: 2px solid $color-primary;
+    transition: border-color 0.3s ease;
+    text-transform: none;
+
+    &:hover {
+      background: none;
+      border-color: $color-black;
+    }
+  }
+
+  &--orange {
+    background: $color-orange;
+    border-color: $color-orange;
+
+    &:hover {
+      background: lighten($color-orange, 5);
+      border-color: lighten($color-orange, 5);
+    }
+  }
+}

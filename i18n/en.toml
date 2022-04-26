@@ -1,0 +1,23 @@
+[ name ]
+other = "Name"
+
+[ email ]
+other = "Email"
+
+[ file ]
+other = "File"
+
+[ message ]
+other = "Message"
+
+[ terms ]
+other = "I agree with privacy policy"
+
+[ submit ]
+other = "Submit"
+
+[ people ]
+other = "Who we are"
+
+[ more ]
+other = "More"

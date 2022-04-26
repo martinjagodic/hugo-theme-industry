@@ -1,0 +1,48 @@
+{
+  "name": "hugo-theme-industry",
+  "version": "0.0.1",
+  "description": "A fast Hugo theme",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo",
+    "lint": "npx htmlhint 'layouts/**/*.html' & eslint . & npx stylelint 'assets/styles/*.scss'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinjagodic/hugo-theme-industry.git"
+  },
+  "author": "Martin Jagodic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinjagodic/hugo-theme-industry/issues"
+  },
+  "homepage": "https://github.com/martinjagodic/hugo-theme-industry#readme",
+  "devDependencies": {
+    "@namics/stylelint-bem": "^6.3.1",
+    "eslint": "^7.19.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "htmlhint": "^0.14.2",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "stylelint": "^13.9.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^9.8.6",
+    "lozad": "^1.16.0",
+    "postcss": "^8.2.10",
+    "postcss-cli": "^8.3.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.scss": "stylelint",
+    "*.css": "stylelint",
+    "*.html": "htmlhint"
+  }
+}

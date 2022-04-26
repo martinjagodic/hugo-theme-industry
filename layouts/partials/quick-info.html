@@ -1,0 +1,16 @@
+<div class="quick-info">
+  <a href="{{ .Site.Params.mapUrl }}" target="_blank">
+    <i data-feather="map-pin" height="20"></i>
+    {{ .Site.Params.address }}
+  </a>
+
+  <a href="mailto:{{ .Site.Params.email }}" target="_blank">
+    <i data-feather="mail" height="20"></i>
+    {{ .Site.Params.email }}
+  </a>
+
+  <a href="tel:{{ .Site.Params.phone }}" class="quick-info__important">
+    <i data-feather="phone" height="20"></i>
+    <span>{{ .Site.Params.phone }}</span>
+  </a>
+</div>

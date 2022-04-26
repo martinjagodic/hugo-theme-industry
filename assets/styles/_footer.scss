@@ -1,0 +1,47 @@
+.footer {
+  margin-top: var(--section-margin);
+  padding: calc(2 * var(--p-margin)) 0;
+  background: $color-black;
+  color: $color-white;
+
+  @include breakpoint-down('md') {
+    --grid-row-gap: calc(2 * var(--p-margin));
+  }
+
+  .grid {
+    align-items: center;
+  }
+
+  &__logo {
+    border-bottom: none;
+    display: block;
+
+    @include breakpoint-down('md') {
+      text-align: center;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+
+    @include breakpoint-down('md') {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    a {
+      flex-shrink: 0;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+
+    @include breakpoint-up('md') {
+      text-align: right;
+    }
+  }
+}

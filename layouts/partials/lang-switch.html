@@ -1,0 +1,23 @@
+<nav class="lang-switch">
+  <button
+    class="lang-switch__button"
+    title="{{ T "switch-language" }}"
+    aria-expanded="false"
+    aria-controls="lang-switch">
+    {{ .Site.Language }} <i data-feather="chevron-down"></i>
+  </button>
+
+  <ul id="lang-switch">
+    {{ range .Translations }}
+      <li>
+        <a
+          rel="alternate"
+          href="{{ .RelPermalink }}"
+          hreflang="{{ .Lang }}"
+          lang="{{ .Lang }}">
+          {{ .Language }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>

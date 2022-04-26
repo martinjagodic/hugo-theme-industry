@@ -1,0 +1,18 @@
+{{ $cookies := resources.Get "scripts/cookies.js" | js.Build }}
+{{ $lazyload := resources.Get "/scripts/lazyload.js" | js.Build }}
+{{ $header := resources.Get "/scripts/header.js" | js.Build }}
+{{ $cardSlider := resources.Get "/scripts/card-slider.js" | js.Build }}
+{{ $homePartners := resources.Get "/scripts/home-partners.js" | js.Build }}
+
+{{ $bundleItems := slice $lazyload $header $cardSlider $homePartners }}
+
+{{ $bundleJs := $bundleItems | resources.Concat "scripts/bundle.js" | js.Build (dict "sourcemap" "inline") }}
+
+<script>
+  feather.replace()
+  window.BREAKPOINTS = {{ .Site.Params.breakpoints }}
+</script>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script defer src="{{ $bundleJs.RelPermalink }}"></script>
