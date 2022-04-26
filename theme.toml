@@ -3,7 +3,7 @@
 
 name = "industry"
 license = "MIT"
-licenselink = "https://github.com/martinjagodic/hugo-theme-industry/blob/master/LICENSE"
+licenselink = "https://github.com/martinjagodic/hugo-theme-industry/blob/main/LICENSE"
 description = "A fast, clean, responsive Hugo theme"
 homepage = "https://hugo-theme-industry.netlify.app/"
 tags = [

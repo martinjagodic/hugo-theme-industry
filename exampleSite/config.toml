@@ -44,5 +44,5 @@ weight = 3
 description = "Ein schnelles und responsives Hugo-Thema"
 
 [module]
-  [[module.imports]]
-    path = "github.com/martinjagodic/hugo-theme-industry"
+[[module.imports]]
+path = "github.com/martinjagodic/hugo-theme-industry"
