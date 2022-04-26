@@ -1,13 +1,11 @@
 [build]
 publish = "public"
 command = "hugo --gc --minify"
-ignore = "/bin/false"
 
 [build.environment]
 HUGO_VERSION = "0.96.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
-HUGO_THEME = "industry"
 
 [context.deploy-preview]
 command = "hugo -D -F --minify -b $DEPLOY_PRIME_URL"

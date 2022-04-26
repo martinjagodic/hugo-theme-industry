@@ -3,7 +3,8 @@ googleAnalytics = ""
 disableFastRender = true
 languageCode = "en-en"
 defaultContentLanguage = "en"
-theme = "industry"
+theme = "."
+themesDir = "../"
 
 [params]
 description = "A fast and responsive Hugo theme"
@@ -43,6 +44,3 @@ weight = 3
 [languages.de.params]
 description = "Ein schnelles und responsives Hugo-Thema"
 
-[module]
-[[module.imports]]
-path = "github.com/martinjagodic/hugo-theme-industry"
