@@ -16,7 +16,6 @@
   'cookies',
   'button',
   'page-hero',
-  'card',
   'contact-banner',
   'card-slider',
 
@@ -25,7 +24,9 @@
   'home/testimonies',
   'home/partners',
   'home/services',
-  'home/machinery',
   'home/blog',
 
   'layouts/contact';
+
+@import
+  'custom.scss';
