@@ -42,3 +42,7 @@ weight = 3
 
 [languages.de.params]
 description = "Ein schnelles und responsives Hugo-Thema"
+
+[module]
+  [[module.imports]]
+    path = "github.com/martinjagodic/hugo-theme-industry"
