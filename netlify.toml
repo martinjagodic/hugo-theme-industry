@@ -1,0 +1,15 @@
+[build]
+publish = "exampleSite/public"
+command = "cd exampleSite && hugo --gc --minify --themesDir ../.. -b $URL"
+
+[build.environment]
+HUGO_VERSION = "0.96.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+HUGO_THEME = "repo"
+
+[context.deploy-preview]
+command = "hugo --gc --themesDir ../.. -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+command = "hugo --gc --themesDir ../.. -b $DEPLOY_PRIME_URL"
