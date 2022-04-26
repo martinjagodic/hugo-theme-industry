@@ -3,6 +3,8 @@
 
 A fast [Hugo](https://gohugo.io/) theme.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f3454f2a-09c8-445e-93ac-cd60f0f6ea92/deploy-status)](https://app.netlify.com/sites/hugo-theme-industry/deploys)
+
 Features:
 - responsive
 - fast
@@ -23,10 +25,10 @@ Inside the folder of your Hugo project, run:
 git submodule add https://github.com/martinjagodic/hugo-theme-industry themes/industry
 ```
 
-Open `config.toml`, change `theme` to `"hugo-theme-industry"`:
+Open `config.toml`, change `theme` to `"industry"`:
 
 ```toml
-theme = "hugo-theme-industry"
+theme = "industry"
 ```
 
 For more information, please read the [official guide](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) of Hugo.

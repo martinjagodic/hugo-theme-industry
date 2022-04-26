@@ -3,7 +3,7 @@ googleAnalytics = ""
 disableFastRender = true
 languageCode = "en-en"
 defaultContentLanguage = "en"
-theme = "hugo-theme-industry"
+theme = "industry"
 
 [params]
 description = "A fast and responsive Hugo theme"
