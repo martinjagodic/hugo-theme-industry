@@ -7,7 +7,7 @@ ignore = "/bin/false"
 HUGO_VERSION = "0.96.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
-HUGO_THEME = "industry"
+HUGO_THEME = "hugo-theme-industry"
 
 [context.deploy-preview]
 command = "hugo -D -F --minify -b $DEPLOY_PRIME_URL"

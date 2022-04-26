@@ -23,10 +23,10 @@ Inside the folder of your Hugo project, run:
 git submodule add https://github.com/martinjagodic/hugo-theme-industry themes/industry
 ```
 
-Open `config.toml`, change `theme` to `"industry"`:
+Open `config.toml`, change `theme` to `"hugo-theme-industry"`:
 
 ```toml
-theme = "industry"
+theme = "hugo-theme-industry"
 ```
 
 For more information, please read the [official guide](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme) of Hugo.
