@@ -42,7 +42,7 @@
     color: var(--text2);
     border: none;
     height: 100%;
-    padding: 0 var(--container-padding);
+    padding: 0 var(--header-lr-padding);
     text-align: center;
     cursor: pointer;
     border-left: 1px solid currentcolor;
@@ -83,11 +83,11 @@
     transition: background 0.3s ease;
     display: flex;
     align-items: center;
-    padding: 20px var(--container-padding);
+    padding: 20px var(--header-lr-padding);
 
     @include breakpoint-up("md") {
       height: 100%;
-      padding: 0 var(--container-padding);
+      padding: 0 var(--header-lr-padding);
     }
 
     &:hover,

@@ -5,17 +5,14 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    gap: clamp(20px, 4vw, 40px);
     align-items: center;
     margin-bottom: calc(var(--p-margin) * 2);
-
-    @include breakpoint-down('sm') {
-      padding: 0 var(--container-padding);
-    }
   }
 
   &__navigation {
     display: flex;
-    gap: clamp(20px, 4vw, 32px);
+    gap: clamp(12px, 2.4vw, 32px);
   }
 
   .swiper-slide {
@@ -29,6 +26,10 @@
     right: auto;
     top: auto;
     margin-top: auto;
+
+    &:after {
+      font-size: clamp(20px, 4vw, 28px);
+    }
   }
 
   &__footer {

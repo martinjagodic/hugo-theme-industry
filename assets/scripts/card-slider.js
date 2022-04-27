@@ -6,6 +6,7 @@ function cardSlider (slider, spvDesktop = 3) {
   // eslint-disable-next-line no-unused-vars
   const swiper = new Swiper(slider, {
     slidesPerView: 1,
+    spaceBetween: 10,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

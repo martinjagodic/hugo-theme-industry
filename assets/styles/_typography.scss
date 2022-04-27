@@ -11,23 +11,31 @@ body {
 
 :root {
   --p-margin: clamp(16px, 3.2vw, 24px);
-  --section-margin: calc(4 * var(--p-margin));
+  --section-margin: calc(6 * var(--p-margin));
 }
 
 h1,
 .h1 {
   font-size: clamp(32px, 6.4vw, 80px);
   text-transform: uppercase;
-  font-weight: 700;
   margin: calc(2 * var(--p-margin)) 0;
+  font-weight: 500;
+
+  @include breakpoint-up('sm') {
+    font-weight: 700;
+  }
 }
 
 h2,
 .h2 {
   font-size: clamp(28px, 5.6vw, 60px);
   text-transform: uppercase;
-  font-weight: 700;
   margin: calc(2 * var(--p-margin)) 0;
+  font-weight: 500;
+
+  @include breakpoint-up('sm') {
+    font-weight: 700;
+  }
 }
 
 h3,
@@ -35,6 +43,11 @@ h3,
   font-size: clamp(24px, 4.8vw, 40px);
   text-transform: uppercase;
   margin: calc(1.5 * var(--p-margin)) 0;
+  font-weight: 500;
+
+  @include breakpoint-up('sm') {
+    font-weight: 700;
+  }
 }
 
 h4,
@@ -42,6 +55,11 @@ h4,
   font-size: clamp(20px, 4vw, 32px);
   text-transform: uppercase;
   margin: calc(1.5 * var(--p-margin)) 0;
+  font-weight: 500;
+
+  @include breakpoint-up('sm') {
+    font-weight: 700;
+  }
 }
 
 a {

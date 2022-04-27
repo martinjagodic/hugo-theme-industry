@@ -3,7 +3,7 @@
 $columns-count: 12;
 
 :root {
-  --container-padding: clamp(20px, 2.5vw, 80px);
+  --container-padding: clamp(20px, 6.25vw, 120px);
   --content-width: calc(1760px + (2 * var(--container-padding)));
   --grid-row-gap: clamp(12px, 2.4vw, 40px);
   --grid-column-gap: clamp(12px, 2.4vw, 40px);
