@@ -1,8 +1,8 @@
 .footer {
   margin-top: var(--section-margin);
   padding: calc(2 * var(--p-margin)) 0;
-  background: $color-black;
-  color: $color-white;
+  background: var(--color-black);
+  color: var(--color-white);
 
   @include breakpoint-down('md') {
     --grid-row-gap: calc(2 * var(--p-margin));

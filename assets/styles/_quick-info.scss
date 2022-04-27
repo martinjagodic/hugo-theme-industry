@@ -4,7 +4,7 @@
   align-items: center;
 
   @include breakpoint-down('md') {
-    background: $color-orange;
+    background: var(--color-orange);
   }
 
   @include breakpoint-up('md') {
@@ -13,7 +13,7 @@
     gap: 40px;
     justify-content: flex-end;
     font-size: 14px;
-    background: $color-grey-light;
+    background: var(--color-grey-light);
   }
 
   a {
@@ -31,11 +31,11 @@
   }
 
   &__important {
-    color: $color-orange;
+    color: var(--color-orange);
 
     @include breakpoint-down('md') {
       display: flex !important;
-      color: $color-white;
+      color: var(--color-white);
 
       span {
         display: none;

@@ -3,50 +3,50 @@
   padding: clamp(12px, 2.4vw, 16px) clamp(32px, 6.4vw, 40px);
   display: inline-block;
   text-transform: uppercase;
-  border: 2px solid $color-black;
-  background: $color-black;
-  color: $color-white;
+  border: 2px solid var(--color-black);
+  background: var(--color-black);
+  color: var(--color-white);
   min-width: 160px;
   text-align: center;
   transition: background 0.3s ease;
   cursor: pointer;
 
   &:hover {
-    background: lighten($color-black, 20);
+    background: var(--color-black);
   }
 
   &--secondary {
     background: transparent;
-    color: $color-black;
+    color: var(--color-black);
 
     &:hover {
-      background: darken($color-white, 5);
+      background: var(--color-white);
     }
   }
 
   &--tertiary {
     border: none;
     background: none;
-    color: $color-black;
+    color: var(--color-black);
     min-width: auto;
     padding: 0 0 2px;
-    border-bottom: 2px solid $color-primary;
+    border-bottom: 2px solid var(--color-primary);
     transition: border-color 0.3s ease;
     text-transform: none;
 
     &:hover {
       background: none;
-      border-color: $color-black;
+      border-color: var(--color-black);
     }
   }
 
   &--orange {
-    background: $color-orange;
-    border-color: $color-orange;
+    background: var(--color-orange);
+    border-color: var(--color-orange);
 
     &:hover {
-      background: lighten($color-orange, 5);
-      border-color: lighten($color-orange, 5);
+      background: var(--color-orange);
+      border-color: var(--color-orange);
     }
   }
 }

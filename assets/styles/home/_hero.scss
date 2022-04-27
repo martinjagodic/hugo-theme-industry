@@ -1,13 +1,13 @@
 .home-hero {
   height: calc(100vh - var(--header-height));
   position: relative;
-  background-color: rgba($color-black, 0.5);
-  color: $color-white;
+  background-color: var(--color-black);
+  color: var(--color-white);
   display: flex;
   align-items: center;
 
   &::after {
-    content: '';
+    content: "";
     background-size: cover;
     background-position: center 10%;
     background-repeat: no-repeat;

@@ -26,7 +26,7 @@ $columns-count: 12;
   grid-gap: var(--grid-row-gap) var(--grid-column-gap);
 
   &.no-gap {
-    grid-gap: 0 0;
+    grid-gap: 0;
   }
 
   &.no-row-gap {

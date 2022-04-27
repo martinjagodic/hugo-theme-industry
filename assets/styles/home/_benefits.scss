@@ -1,6 +1,6 @@
 .home-benefits {
-  background-color: rgba($color-black, 0.6);
-  color: $color-white;
+  background-color: var(--color-black);
+  color: var(--color-white);
   position: relative;
 
   &::after {

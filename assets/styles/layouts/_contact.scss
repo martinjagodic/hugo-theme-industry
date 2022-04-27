@@ -30,7 +30,7 @@
     flex-direction: column;
 
     form {
-      background: $color-grey-light;
+      background: var(--color-grey-light);
       padding: var(--container-padding);
       height: 100%;
 

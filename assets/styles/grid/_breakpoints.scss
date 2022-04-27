@@ -9,31 +9,25 @@ $breakpoints: (
 );
 
 @mixin breakpoint-up($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
+  $value: map.get($breakpoints, $breakpoint);
 
-  @if $value != null {
+  @if $value {
     @media (min-width: $value) {
       @content;
     }
-  }
-
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-      + "Please make sure it is defined in `$breakpoints` map.";
+  } @else {
+    @warn 'No value could be retrieved from `#{$breakpoint}`. Make sure it is defined in `$breakpoints` map.';
   }
 }
 
 @mixin breakpoint-down($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
+  $value: map.get($breakpoints, $breakpoint);
 
-  @if $value != null {
+  @if $value {
     @media (max-width: ($value - 1)) {
       @content;
     }
-  }
-
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-      + "Please make sure it is defined in `$breakpoints` map.";
+  } @else {
+    @warn 'No value could be retrieved from `#{$breakpoint}`. Make sure it is defined in `$breakpoints` map.';
   }
 }

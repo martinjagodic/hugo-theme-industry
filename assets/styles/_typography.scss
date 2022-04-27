@@ -1,17 +1,11 @@
-// import fonts, define headings, paragraphs, lists etc
-
 body {
   font-size: 16px;
   line-height: 1.5;
-  color: $color-black;
-}
-
-::-moz-selection {
-  background: rgba($color-primary, 0.5);
+  color: var(--color-black);
 }
 
 ::selection {
-  background: rgba($color-primary, 0.5);
+  background: var(--color-primary);
 }
 
 :root {
@@ -52,7 +46,7 @@ h4,
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid $color-orange;
+  border-bottom: 1px solid var(--color-orange);
 }
 
 p,

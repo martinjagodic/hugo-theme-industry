@@ -1,14 +1,15 @@
-$color-black: #303030;
-$color-white: #fff;
-$color-grey: #828a95;
-$color-grey-light: #ebebeb;
-$color-orange: #f80;
-$color-blue: #4392f1;
-$color-red: #a50104;
-
-$color-primary: $color-orange;
-$color-secondary: $color-blue;
+:root {
+  --color-black: #303030;
+  --color-white: #fff;
+  --color-grey: #828a95;
+  --color-grey-light: #ebebeb;
+  --color-orange: #f80;
+  --color-blue: #4392f1;
+  --color-red: #a50104;
+  --color-primary: var(--color-orange);
+  --color-secondary: var(--color-blue);
+}
 
 .color-orange {
-  color: $color-orange;
+  color: var(--color-orange);
 }

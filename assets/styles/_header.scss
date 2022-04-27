@@ -17,7 +17,7 @@
   }
 
   &__logo {
-    background: $color-orange;
+    background: var(--color-orange);
     padding: 8px var(--container-padding);
     display: flex;
     align-items: center;

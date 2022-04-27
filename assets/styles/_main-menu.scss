@@ -13,8 +13,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    background: $color-black;
-    color: $color-white;
+    background: var(--color-black);
+    color: var(--color-white);
     height: 100%;
     text-transform: uppercase;
 
@@ -29,42 +29,42 @@
       justify-content: flex-start;
       z-index: 10;
       overflow-y: auto;
-      border-top: 1px solid currentColor;
+      border-top: 1px solid currentcolor;
     }
 
     @include breakpoint-up('md') {
-      border-right: 1px solid currentColor;
+      border-right: 1px solid currentcolor;
     }
   }
 
   button {
-    background: $color-black;
-    color: $color-white;
+    background: var(--color-black);
+    color: var(--color-white);
     border: none;
     height: 100%;
     padding: 0 var(--container-padding);
     text-align: center;
     cursor: pointer;
-    border-left: 1px solid currentColor;
+    border-left: 1px solid currentcolor;
     transition: background 0.3s ease;
 
     &:hover,
     &.active {
-      background: lighten($color-black, 20);
+      background: var(--color-black);
     }
 
     @include breakpoint-up('md') {
       display: none;
     }
 
-    &[aria-expanded="true"] {
+    &[aria-expanded='true'] {
       .feather-menu {
         display: none;
       }
     }
 
     @include breakpoint-down('md') {
-      &[aria-expanded="false"] {
+      &[aria-expanded='false'] {
         .feather-x,
         + ul {
           display: none;
@@ -92,7 +92,7 @@
 
     &:hover,
     &.active {
-      background: lighten($color-black, 20);
+      background: var(--color-black);
     }
   }
 }
