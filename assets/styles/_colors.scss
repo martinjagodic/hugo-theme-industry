@@ -1,8 +1,8 @@
 :root {
   // base color
-  --brand-hue: 336;         // MDM 32       OMK 238
-  --brand-saturation: 82%;  // MDM 100%     OMK 52%
-  --brand-lightness: 24%;   // MDM 50%      OMK 38%
+  --brand-hue: 336;         // MDM 32       OMK 238   IND 336
+  --brand-saturation: 82%;  // MDM 100%     OMK 52%   IND 82%
+  --brand-lightness: 24%;   // MDM 50%      OMK 38%   IND 24%
 
   // light colors
   --brand-light: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
@@ -17,12 +17,12 @@
 
   // dark colors
   --brand-dark: hsl(var(--brand-hue) calc(var(--brand-saturation) / 1.25) calc(var(--brand-lightness) / 1.25));
-  --text1-dark: hsl(var(--brand-hue) 15% 75%);
-  --text2-dark: hsl(var(--brand-hue) 10% 61%);
-  --surface1-dark: hsl(var(--brand-hue) 10% 20%);
-  --surface2-dark: hsl(var(--brand-hue) 10% 25%);
-  --surface3-dark: hsl(var(--brand-hue) 5%  30%);
-  --surface4-dark: hsl(var(--brand-hue) 5% 35%);
+  --text1-dark: hsl(var(--brand-hue) 15% 98%);
+  --text2-dark: hsl(var(--brand-hue) 5% 80%);
+  --surface1-dark: hsl(var(--brand-hue) 5% 20%);
+  --surface2-dark: hsl(var(--brand-hue) 5% 25%);
+  --surface3-dark: hsl(var(--brand-hue) 10%  30%);
+  --surface4-dark: hsl(var(--brand-hue) 10% 35%);
   --surface-shadow-dark: var(--brand-hue) 30% 13%;
   --shadow-strength-dark: 0.2;
 
