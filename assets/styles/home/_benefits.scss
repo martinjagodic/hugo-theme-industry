@@ -1,10 +1,10 @@
 .home-benefits {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--surface1);
+  color: var(--text2);
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -19,11 +19,11 @@
     padding: 0;
     font-size: clamp(20px, 4vw, 24px);
 
-    @include breakpoint-up('xs') {
+    @include breakpoint-up("xs") {
       columns: 2;
     }
 
-    @include breakpoint-up('md') {
+    @include breakpoint-up("md") {
       columns: 3;
     }
 

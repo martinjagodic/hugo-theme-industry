@@ -2,7 +2,11 @@
 title: Home
 description: A fast and responsive Hugo theme 
 hero:
-  title: A fast and responsive Hugo theme
+  title: Industry
+  description: Fast and responsive Hugo theme
+  image:
+    src: /uploads/printers.avif
+    alt: printers
 benefits:
   title: Advantages of Industry Theme
   items:

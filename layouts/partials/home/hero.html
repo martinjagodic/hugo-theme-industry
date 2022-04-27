@@ -1,7 +1,15 @@
 <div class="home-hero">
+  {{ with .image }}
+    <img src="{{ .src }}" alt="{{ .alt }}">
+  {{ end }}
+
   <div class="container grid">
     <div class="col-12 col-sm-11 col-lg-10 offset-xl-1 offset-xxxl-2 col-xxl-8">
-      <h1>{{ .title | safeHTML }}</h1>
+      <h1>{{ .title }}</h1>
+
+      {{ with .description }}
+        <p class="large-text">{{ . }}</p>
+      {{ end }}
     </div>
   </div>
 </div>

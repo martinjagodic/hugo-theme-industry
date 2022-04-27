@@ -2,12 +2,12 @@
   position: fixed;
   width: 100%;
   bottom: 0;
-  background-color: var(--color-white);
+  background-color: var(--text2);
   padding: 12px 0;
-  box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 0 20px 0 var(--surface-shadow);
   z-index: 1000;
 
-  @include breakpoint-up('md') {
+  @include breakpoint-up("md") {
     padding: 24px 0;
   }
 }

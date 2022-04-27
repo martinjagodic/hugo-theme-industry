@@ -2,7 +2,11 @@
 title: Heim
 description: Ein schnelles und responsives Hugo-Thema
 hero:
-  title: Ein schnelles und responsives Hugo-Thema
+  title: Industry
+  description: Ein schnelles und responsives Hugo-Thema
+  image:
+    src: /uploads/printers.avif
+    alt: printers
 benefits:
   title: Vorteile des Industrie -Themas
   items:

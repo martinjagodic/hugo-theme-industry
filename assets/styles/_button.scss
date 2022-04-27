@@ -3,50 +3,40 @@
   padding: clamp(12px, 2.4vw, 16px) clamp(32px, 6.4vw, 40px);
   display: inline-block;
   text-transform: uppercase;
-  border: 2px solid var(--color-black);
-  background: var(--color-black);
-  color: var(--color-white);
+  border: 2px solid var(--text1);
+  background-color: var(--surface2);
+  color: var(--text1);
   min-width: 160px;
   text-align: center;
   transition: background 0.3s ease;
   cursor: pointer;
 
   &:hover {
-    background: var(--color-black);
+    background-color: var(--surface3);
   }
 
   &--secondary {
-    background: transparent;
-    color: var(--color-black);
+    background-color: var(--surface1);
+    color: var(--text2);
 
     &:hover {
-      background: var(--color-white);
+      color: var(--text1);
     }
   }
 
   &--tertiary {
     border: none;
-    background: none;
-    color: var(--color-black);
+    background-color: none;
+    color: var(--text1);
     min-width: auto;
     padding: 0 0 2px;
-    border-bottom: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--brand);
     transition: border-color 0.3s ease;
     text-transform: none;
 
     &:hover {
-      background: none;
-      border-color: var(--color-black);
-    }
-  }
-
-  &--orange {
-    background: var(--color-orange);
-    border-color: var(--color-orange);
-
-    &:hover {
-      background: var(--color-orange);
-      border-color: var(--color-orange);
+      background-color: none;
+      border-color: var(--text1);
     }
   }
 }

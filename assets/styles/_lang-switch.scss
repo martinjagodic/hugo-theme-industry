@@ -5,7 +5,7 @@
   text-transform: uppercase;
   font-size: 16px;
 
-  @include breakpoint-up('md') {
+  @include breakpoint-up("md") {
     grid-row: 2 / 3;
     grid-column: 3 / 4;
     font-size: 20px;
@@ -21,8 +21,8 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    background: var(--color-black);
-    color: var(--color-white);
+    background-color: var(--surface1);
+    color: var(--text2);
     text-align: center;
   }
 
@@ -35,7 +35,7 @@
     transition: background 0.3s ease;
 
     &:hover {
-      background: var(--color-black);
+      background-color: var(--surface1);
     }
   }
 
@@ -48,28 +48,28 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background: var(--color-black);
-    color: var(--color-white);
+    background-color: var(--surface1);
+    color: var(--text2);
     transition: background 0.3s ease;
 
-    @include breakpoint-down('md') {
+    @include breakpoint-down("md") {
       gap: 4px;
     }
 
     &:hover {
-      background: var(--color-black);
+      background-color: var(--surface1);
     }
 
     .feather {
       transition: transform 0.3s ease;
     }
 
-    &[aria-expanded='false'] + ul {
+    &[aria-expanded="false"] + ul {
       display: none;
     }
 
-    &[aria-expanded='true'] {
-      background: var(--color-black);
+    &[aria-expanded="true"] {
+      background-color: var(--surface1);
 
       .feather {
         transform: rotate(180deg);

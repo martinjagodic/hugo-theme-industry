@@ -30,11 +30,11 @@
     flex-direction: column;
 
     form {
-      background: var(--color-grey-light);
+      background-color: var(--surface4);
       padding: var(--container-padding);
       height: 100%;
 
-      @include breakpoint-down('sm') {
+      @include breakpoint-down("sm") {
         margin: 0 calc(-1 * var(--container-padding));
       }
     }
