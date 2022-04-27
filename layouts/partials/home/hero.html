@@ -1,15 +1,15 @@
-<div class="home-hero">
-  {{ with .image }}
-    <img src="{{ .src }}" alt="{{ .alt }}">
-  {{ end }}
+<div class="home-hero grid no-gap">
+  <div class="col-12 col-sm-6 col-xxl-5 home-hero__text">
+    <h1 class="no-margin"><span>{{ .title }}</span></h1>
 
-  <div class="container grid">
-    <div class="col-12 col-sm-11 col-lg-10 offset-xl-1 offset-xxxl-2 col-xxl-8">
-      <h1><span>{{ .title }}</span></h1>
-
-      {{ with .description }}
-        <p class="large-text"><span>{{ . }}</span></p>
-      {{ end }}
-    </div>
+    {{ with .description }}
+      <p class="large-text no-margin-bottom"><span>{{ . | safeHTML }}</span></p>
+    {{ end }}
   </div>
+
+  {{ with .image }}
+    <div class="col-12 col-sm-6 col-xxl-7">
+      <img src="{{ .src }}" alt="{{ .alt }}">
+    </div>
+  {{ end }}
 </div>

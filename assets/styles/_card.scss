@@ -72,11 +72,7 @@
   }
 
   &--extra {
-    border-color: var(--brand);
-
-    #{$self}__text {
-      background-color: var(--surface4);
-    }
+    border: 3px solid var(--brand);
   }
 
   &--wide {
