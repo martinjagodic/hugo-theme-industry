@@ -39,6 +39,10 @@
   margin-top: var(--section-margin);
 }
 
+.section-margin-small-top {
+  margin-top: var(--section-margin-small);
+}
+
 .section-margin-bottom {
   margin-bottom: var(--section-margin);
 }
@@ -46,6 +50,11 @@
 .section-padding {
   padding-top: var(--section-margin);
   padding-bottom: var(--section-margin);
+}
+
+.section-padding-small {
+  padding-top: var(--section-margin-small);
+  padding-bottom: var(--section-margin-small);
 }
 
 .section-padding-top {

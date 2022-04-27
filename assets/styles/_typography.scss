@@ -12,6 +12,7 @@ body {
 :root {
   --p-margin: clamp(16px, 3.2vw, 24px);
   --section-margin: calc(6 * var(--p-margin));
+  --section-margin-small: calc(4 * var(--p-margin));
 }
 
 h1,

@@ -1,7 +1,9 @@
 .button {
   font-size: 16px;
   padding: clamp(12px, 2.4vw, 16px) clamp(32px, 6.4vw, 40px);
-  display: inline-block;
+  display: inline-flex;
+  gap: clamp(12px, 2.4vw, 20px);
+  align-items: center;
   text-transform: uppercase;
   border: 2px solid var(--text1);
   background-color: var(--surface2);
@@ -13,6 +15,10 @@
 
   &:hover {
     background-color: var(--surface4);
+  }
+
+  &::after {
+    content: "→";
   }
 
   &--secondary {
@@ -33,6 +39,7 @@
     border-bottom: 2px solid var(--brand);
     transition: border-color 0.3s ease;
     text-transform: none;
+    gap: 8px;
 
     &:hover {
       background: none;

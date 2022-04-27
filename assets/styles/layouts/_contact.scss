@@ -1,6 +1,4 @@
 .layout-kontakt {
-  margin-top: var(--section-margin);
-
   &__info {
     list-style: none;
     padding: 0;
@@ -29,13 +27,17 @@
     display: flex;
     flex-direction: column;
 
+    @include breakpoint-up('sm') {
+      padding-left: var(--header-lr-padding);
+    }
+
     form {
       background-color: var(--surface4);
-      padding: var(--container-padding);
+      padding: var(--header-lr-padding);
       height: 100%;
 
       @include breakpoint-down("sm") {
-        margin: 0 calc(-1 * var(--container-padding));
+        margin: 0 calc(-1 * var(--header-lr-padding));
       }
     }
   }
