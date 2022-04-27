@@ -12,7 +12,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: var(--surface3);
+    background-color: var(--surface4);
   }
 
   &--secondary {
@@ -26,8 +26,8 @@
 
   &--tertiary {
     border: none;
-    background-color: none;
-    color: var(--text1);
+    background: none;
+    color: var(--brand);
     min-width: auto;
     padding: 0 0 2px;
     border-bottom: 2px solid var(--brand);
@@ -35,8 +35,9 @@
     text-transform: none;
 
     &:hover {
-      background-color: none;
-      border-color: var(--text1);
+      background: none;
+      color: var(--text2);
+      border-color: var(--text2);
     }
   }
 }

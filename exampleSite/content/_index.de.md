@@ -17,8 +17,9 @@ benefits:
     - text: Open Source
 services:
   title: Dienstleistungen
-machinery:
-  title: Maschinen
+  button:
+    href: /de/services
+    text: mehr Dienstleistungen
 blog:
   title: blog
 ---

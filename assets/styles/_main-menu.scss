@@ -13,8 +13,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: var(--surface1);
-    color: var(--text2);
+    background-color: var(--surface4);
+    color: var(--text1);
     height: 100%;
     text-transform: uppercase;
 
@@ -92,7 +92,7 @@
 
     &:hover,
     &.active {
-      background-color: var(--surface1);
+      background-color: var(--surface2);
     }
   }
 }

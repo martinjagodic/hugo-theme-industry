@@ -2,7 +2,7 @@
 
 const sliders = document.querySelectorAll('.card-slider')
 
-function cardSlider (slider) {
+function cardSlider (slider, spvDesktop = 3) {
   // eslint-disable-next-line no-unused-vars
   const swiper = new Swiper(slider, {
     slidesPerView: 1,
@@ -20,11 +20,14 @@ function cardSlider (slider) {
         spaceBetween: 20,
       },
       [BREAKPOINTS.md]: {
-        slidesPerView: 3,
+        slidesPerView: spvDesktop,
         spaceBetween: 32,
       },
     },
   })
 }
 
-if (sliders) sliders.forEach((slider) => cardSlider(slider))
+sliders?.forEach((slider) => {
+  const { spvDesktop } = slider.dataset
+  cardSlider(slider, spvDesktop)
+})

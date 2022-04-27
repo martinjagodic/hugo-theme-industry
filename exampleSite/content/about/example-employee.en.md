@@ -1,6 +1,6 @@
 ---
-title: Example Emplyee
+title: Example Employee
 description: Works here
 email: example.emplyee@industry.com
-weight: 40
+image: /uploads/person-2.jpeg
 ---

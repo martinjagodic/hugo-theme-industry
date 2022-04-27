@@ -5,10 +5,10 @@
 
   <div class="container grid">
     <div class="col-12 col-sm-11 col-lg-10 offset-xl-1 offset-xxxl-2 col-xxl-8">
-      <h1>{{ .title }}</h1>
+      <h1><span>{{ .title }}</span></h1>
 
       {{ with .description }}
-        <p class="large-text">{{ . }}</p>
+        <p class="large-text"><span>{{ . }}</span></p>
       {{ end }}
     </div>
   </div>
