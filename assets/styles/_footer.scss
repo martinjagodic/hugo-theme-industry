@@ -2,10 +2,13 @@
   margin-top: var(--section-margin);
   padding: calc(2 * var(--p-margin)) 0;
   background-color: var(--surface1);
-  color: var(--text2);
 
   @include breakpoint-down("md") {
     --grid-row-gap: calc(2 * var(--p-margin));
+  }
+
+  a {
+    border-bottom: none;
   }
 
   .grid {
@@ -43,6 +46,7 @@
 
   &__copyright {
     text-align: center;
+    color: var(--text2);
 
     @include breakpoint-up("md") {
       text-align: right;
