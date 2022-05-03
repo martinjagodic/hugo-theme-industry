@@ -7,12 +7,10 @@
 {{ $scss := resources.Get "styles/style.scss" }}
 {{ $style := $scss | resources.ExecuteAsTemplate "style-parsed.scss" . | toCSS $options }}
 
-{{- if (eq (getenv "HUGO_ENV") "production") -}}
-  {{- $style = $style | postCSS | minify | fingerprint "md5" -}}
-{{- end -}}
+{{- $style = $style | postCSS | minify | fingerprint "md5" -}}
 
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-<script src="https://unpkg.com/feather-icons"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
