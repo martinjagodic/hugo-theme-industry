@@ -5,8 +5,8 @@
   gap: clamp(12px, 2.4vw, 20px);
   align-items: center;
   text-transform: uppercase;
-  border: 3px solid var(--text1);
-  background-color: var(--surface2);
+  border: 3px solid var(--brand);
+  background-color: var(--surface3);
   color: var(--text1);
   min-width: 160px;
   text-align: center;
@@ -23,11 +23,9 @@
 
   &--secondary {
     background-color: var(--surface1);
-    border-color: var(--surface1);
-    color: var(--text2);
 
     &:hover {
-      color: var(--text1);
+      background-color: var(--surface2);
     }
   }
 
