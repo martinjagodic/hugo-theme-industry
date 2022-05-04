@@ -4,7 +4,7 @@
 {{ $cardSlider := resources.Get "/scripts/card-slider.js" | js.Build }}
 {{ $homePartners := resources.Get "/scripts/home-partners.js" | js.Build }}
 
-{{ $bundleItems := slice $lazyload $header $cardSlider $homePartners }}
+{{ $bundleItems := slice $lazyload $header $cardSlider $cookies $homePartners }}
 
 {{ $bundleJs := $bundleItems | resources.Concat "scripts/bundle.js" | js.Build (dict "sourcemap" "inline") }}
 
