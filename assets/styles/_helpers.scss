@@ -30,6 +30,10 @@
   overflow: hidden !important;
 }
 
+.p-margin-large-bottom {
+  margin-bottom: calc(var(--p-margin) * 2);
+}
+
 .section-margin {
   margin-top: var(--section-margin);
   margin-bottom: var(--section-margin);
@@ -45,6 +49,10 @@
 
 .section-margin-bottom {
   margin-bottom: var(--section-margin);
+}
+
+.section-margin-small-bottom {
+  margin-bottom: var(--section-margin-small);
 }
 
 .section-padding {

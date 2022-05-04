@@ -5,7 +5,7 @@
     <div class="col-12 col-lg-10 offset-lg-1 col-xxl-8 offset-xxl-2">
       <ul>
         {{ range .items }}
-          <li><i data-feather="check" width="28" height="28"></i> {{ .text }}</li>
+          <li><i data-feather="check" width="28" height="28"></i> {{ . }}</li>
         {{ end }}
       </ul>
     </div>
