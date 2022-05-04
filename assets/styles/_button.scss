@@ -17,7 +17,7 @@
     background-color: var(--surface4);
   }
 
-  &::after {
+  &:not(.no-arrow)::after {
     content: "→";
   }
 
