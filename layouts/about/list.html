@@ -2,7 +2,7 @@
   <main>
     <div class="container grid no-gap">
       <div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 col-xxl-6 offset-xxl-3">
-        <h1 class="section-margin-small-top {{ with .Description }}no-margin-bottom{{ end }}">{{ .Title }}</h1>
+        <h1 class="section-margin-small-top">{{ .Title }}</h1>
 
         {{ with .Description }}
           <p class="large-text p-margin-large-bottom">{{ . }}</p>
@@ -10,7 +10,7 @@
 
         {{ .Content | safeHTML }}
 
-        <h2>{{ T "people" }}</h2>
+        <h2 class="text-center">{{ T "people" }}</h2>
       </div>
 
       <div class="col-12 col-md-10 offset-md-1 col-xxl-8 offset-xxl-2 grid">

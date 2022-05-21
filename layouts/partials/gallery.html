@@ -1,0 +1,7 @@
+<div class="gallery">
+  {{ range .items }}
+    <a href="{{ .src }}">
+      <img alt="{{ .alt }}" src="{{ .src }}" />
+    </a>
+  {{ end }}
+</div>

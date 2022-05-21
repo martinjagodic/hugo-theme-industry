@@ -10,6 +10,7 @@
 {{- $style = $style | postCSS | minify | fingerprint "md5" -}}
 
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/lightgallery@2.4.0/css/lightgallery-core.css" />
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 

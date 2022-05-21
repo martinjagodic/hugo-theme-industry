@@ -3,16 +3,21 @@
 {{ $header := resources.Get "/scripts/header.js" | js.Build }}
 {{ $cardSlider := resources.Get "/scripts/card-slider.js" | js.Build }}
 {{ $homePartners := resources.Get "/scripts/home-partners.js" | js.Build }}
+{{ $gallery := resources.Get "/scripts/gallery.js" | js.Build }}
 
-{{ $bundleItems := slice $lazyload $header $cardSlider $cookies $homePartners }}
+{{ $bundleItems := slice $lazyload $header $cardSlider $cookies $homePartners $gallery }}
 
-{{ $bundleJs := $bundleItems | resources.Concat "scripts/bundle.js" | js.Build (dict "sourcemap" "inline") }}
+{{ $bundleJs := $bundleItems | resources.Concat "scripts/bundle.js" | js.Build (dict
+  "sourcemap" "inline"
+  "minify" hugo.IsProduction
+) }}
 
 <script>
   feather.replace()
   window.BREAKPOINTS = {{ .Site.Params.breakpoints }}
 </script>
 
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+<script src="https://unpkg.com/lightgallery@2.4.0/lightgallery.min.js" defer></script>
 
-<script defer src="{{ $bundleJs.RelPermalink }}"></script>
+<script src="{{ $bundleJs.RelPermalink }}" defer></script>

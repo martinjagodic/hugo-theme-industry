@@ -1,0 +1,10 @@
+table {
+  border: 1px solid var(--text1);
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid var(--text1);
+  padding: clamp(4px, 0.8vw, 8px) clamp(8px, 1.6vw, 16px);
+}

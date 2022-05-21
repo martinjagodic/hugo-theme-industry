@@ -3,7 +3,7 @@
     <h1 class="no-margin"><span>{{ .title }}</span></h1>
 
     {{ with .description }}
-      <p class="large-text no-margin-bottom"><span>{{ . | safeHTML }}</span></p>
+      <p class="large-text no-margin-bottom"><span>{{ . | markdownify }}</span></p>
     {{ end }}
   </div>
 
