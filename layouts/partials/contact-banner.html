@@ -1,11 +1,13 @@
 {{ $data := index .Site.Data.contactBanner .Site.Language.Lang }}
 
-<div class="contact-banner section-margin-top section-padding-small">
+<div class="contact-banner section-margin-small-top section-padding-small">
   <div class="container grid">
     <div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 col-xxl-6 offset-xxl-3">
-      <h2>{{ $data.title }}</h2>
+      <h4 class="h5 no-margin-top">{{ $data.title }}</h4>
       {{ with $data.button }}
-        <a href="{{ .href }}" class="button button--secondary">{{ .text }}</a>
+        <p class="no-margin">
+          <a href="{{ .href }}" class="button button--secondary">{{ .text }}</a>
+        </p>
       {{ end }}
     </div>
   </div>

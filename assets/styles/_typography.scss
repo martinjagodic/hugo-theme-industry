@@ -59,6 +59,18 @@ h4,
   }
 }
 
+h5,
+.h5 {
+  font-size: clamp(20px, 4vw, 32px);
+  margin: calc(1.5 * var(--p-margin)) 0;
+  font-weight: 400;
+  text-transform: none;
+
+  @include breakpoint-up('sm') {
+    font-weight: 500;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;

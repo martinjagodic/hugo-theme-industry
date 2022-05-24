@@ -9,10 +9,13 @@
         {{ end }}
 
         {{ .Content | safeHTML }}
-
-        <h2 class="text-center">{{ T "people" }}</h2>
       </div>
+    </div>
 
+    {{ partialCached "contact-banner" . }}
+
+    <div class="container grid no-gap section-margin-small-top">
+      <h2 class="col-12 col-md-10 offset-md-1 col-xxl-8 offset-xxl-2 text-center">{{ T "people" }}</h2>
       <div class="col-12 col-md-10 offset-md-1 col-xxl-8 offset-xxl-2 grid">
         {{ range .Pages }}
           <div class="col-12 col-xs-6">
@@ -27,5 +30,4 @@
     </div>
   </main>
 
-  {{ partialCached "contact-banner" . }}
 {{ end }}
