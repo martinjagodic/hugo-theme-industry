@@ -3,9 +3,10 @@
 {{ $header := resources.Get "/scripts/header.js" | js.Build }}
 {{ $cardSlider := resources.Get "/scripts/card-slider.js" | js.Build }}
 {{ $homePartners := resources.Get "/scripts/home-partners.js" | js.Build }}
+{{ $homeHero := resources.Get "/scripts/home-hero.js" | js.Build }}
 {{ $gallery := resources.Get "/scripts/gallery.js" | js.Build }}
 
-{{ $bundleItems := slice $lazyload $header $cardSlider $cookies $homePartners $gallery }}
+{{ $bundleItems := slice $lazyload $header $cardSlider $cookies $homePartners $homeHero $gallery }}
 
 {{ $bundleJs := $bundleItems | resources.Concat "scripts/bundle.js" | js.Build (dict
   "sourcemap" "inline"

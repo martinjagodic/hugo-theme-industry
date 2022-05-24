@@ -7,9 +7,14 @@
     {{ end }}
   </div>
 
-  {{ with .image }}
-    <div class="col-12 col-sm-6 col-xxl-7 home-hero__image">
-      <img src="{{ .src }}" alt="{{ .alt }}">
+  {{ with .images }}
+    <div class="col-12 col-sm-6 col-xxl-7 home-hero__image swiper">
+      <div class="swiper-wrapper">
+        {{ range . }}
+          <img src="{{ .src }}" alt="{{ .alt }}" class="swiper-slide">
+        {{ end }}
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
   {{ end }}
 </div>

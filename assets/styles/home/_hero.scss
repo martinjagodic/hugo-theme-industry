@@ -7,12 +7,37 @@
   }
 
   &__image {
+    position: relative;
+
     @include breakpoint-down('sm') {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+    }
+
+    .swiper-pagination {
+      --swiper-theme-color: var(--brand);
+      --swiper-pagination-bullet-size: 16px;
+      --swiper-pagination-bullet-gap: 24px;
+      --swiper-pagination-bullet-inactive-opacity: 0.8;
+      --swiper-pagination-bullet-inactive-color: var(--surface4);
+      position: absolute;
+
+      @include breakpoint-down('sm') {
+        right: var(--container-padding);
+        top: 32px;
+        width: initial;
+        bottom: initial;
+        left: initial;
+      }
+
+      @include breakpoint-up('sm') {
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
@@ -38,7 +63,8 @@
       z-index: 2;
       justify-content: flex-end;
       align-items: flex-start;
-      background: linear-gradient(to bottom, transparent 30%, var(--surface1) 110%) ;
+      background: linear-gradient(to bottom, transparent 30%, var(--surface1) 110%);
+      pointer-events: none;
     }
   }
 
