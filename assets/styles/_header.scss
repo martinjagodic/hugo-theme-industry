@@ -10,6 +10,8 @@
 .header {
   display: flex;
   height: var(--header-height);
+  z-index: 10;
+  position: relative;
 
   @include breakpoint-up("md") {
     display: grid;
