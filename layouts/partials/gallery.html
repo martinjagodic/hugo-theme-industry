@@ -1,7 +1,7 @@
 <div class="gallery">
   {{ range .items }}
     <a href="{{ .src }}">
-      <img alt="{{ .alt }}" src="{{ .src }}" />
+      <img alt="{{ .alt }}" src="{{ .src }}" loading="lazy" />
     </a>
   {{ end }}
 </div>

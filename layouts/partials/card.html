@@ -1,7 +1,7 @@
 <article class="card {{ .class }}">
   {{ if .context.Params.image }}
     <a {{ if not .hideButton }}href="{{ .context.RelPermalink }}"{{ end }} class="card__image">
-      <img src="{{ .context.Params.image }}" alt="{{ .context.Title }}">
+      <img src="{{ .context.Params.image }}" alt="{{ .context.Title }}" loading="lazy">
 
       {{ if eq .class "card--hover" }}
         {{ template "card__hover" .context.Params }}
