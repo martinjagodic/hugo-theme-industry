@@ -6,7 +6,7 @@
 
     {{ if .Params.image }}
       <div class="col-12 col-lg-10 offset-lg-1 col-xxl-8 offset-xxl-2">
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="page-image">
+        <img src="{{ .Params.image }}?nf_resize=fit&w=1100" alt="{{ .Title }}" class="page-image">
       </div>
     {{ end }}
 

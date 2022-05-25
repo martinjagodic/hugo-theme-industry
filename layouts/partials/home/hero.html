@@ -11,7 +11,7 @@
     <div class="col-12 col-sm-6 col-xxl-7 home-hero__image swiper">
       <div class="swiper-wrapper">
         {{ range . }}
-          <img src="{{ .src }}" alt="{{ .alt }}" class="swiper-slide">
+          <img src="{{ .src }}?nf_resize=fit&w=1200" alt="{{ .alt }}" class="swiper-slide">
         {{ end }}
       </div>
       <div class="swiper-pagination"></div>

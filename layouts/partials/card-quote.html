@@ -1,6 +1,6 @@
 <article class="card card--quote {{ .class }}">
   {{ if .context.image }}
-    <img src="{{ .context.image }}" alt="{{ .context.name }}" loading="lazy">
+    <img src="{{ .context.image }}?nf_resize=fit&w=500" alt="{{ .context.name }}" loading="lazy">
   {{ end }}
 
   <div class="card__text">
