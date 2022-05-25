@@ -1,7 +1,7 @@
 .footer {
   margin-top: var(--section-margin);
   padding: calc(2 * var(--p-margin)) 0;
-  background-color: var(--surface1);
+  background-color: var(--surface2);
 
   @include breakpoint-down("md") {
     --grid-row-gap: calc(2 * var(--p-margin));
@@ -12,7 +12,7 @@
   }
 
   .grid {
-    align-items: center;
+    // align-items: center;
   }
 
   &__logo {
@@ -30,13 +30,11 @@
 
   &__menu {
     display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
 
-    @include breakpoint-down("md") {
-      flex-direction: column;
+    @include breakpoint-down('md') {
       align-items: center;
-      gap: 8px;
     }
 
     a {

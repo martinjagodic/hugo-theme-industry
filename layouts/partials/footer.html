@@ -12,7 +12,7 @@
       </a>
     </div>
 
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-3">
       <nav class="footer__menu">
         {{ range .Site.Menus.main }}
           <a href="{{ .URL }}">{{ .Name }}</a>
@@ -20,8 +20,23 @@
       </nav>
     </div>
 
+    <div class="col-12 col-md-3">
+      <nav class="footer__menu">
+        {{ range .Site.Menus.footer }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+
     <div class="col-12 col-md-3 footer__copyright">
-      © {{ dateFormat "2006" now }} {{ $data.copyright }}
+      {{ with $data.company }}
+        <p class="no-margin-top">
+          {{ .name }} <br>
+          {{ .address }} <br>
+          {{ .vat }} <br>
+        </p>
+      {{ end }}
+      <p class="no-margin-bottom">© {{ dateFormat "2006" now }} {{ $data.copyright }}</p>
     </div>
   </div>
 </footer>
