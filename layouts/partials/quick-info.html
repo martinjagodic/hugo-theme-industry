@@ -1,15 +1,15 @@
 <div class="quick-info">
-  <a href="{{ .Site.Params.mapUrl }}" target="_blank">
+  <a href="{{ .Site.Params.mapUrl }}" title="{{ T "directions" }}" target="_blank">
     <i data-feather="map-pin" height="20"></i>
     {{ .Site.Params.address }}
   </a>
 
-  <a href="mailto:{{ .Site.Params.email }}" target="_blank">
+  <a href="mailto:{{ .Site.Params.email }}" title="{{ T "email" }}" target="_blank">
     <i data-feather="mail" height="20"></i>
     {{ .Site.Params.email }}
   </a>
 
-  <a href="tel:{{ .Site.Params.phone }}" class="quick-info__important">
+  <a href="tel:{{ .Site.Params.phone }}" title="{{ T "call" }}" class="quick-info__important">
     <i data-feather="phone" height="20"></i>
     <span>{{ .Site.Params.phone }}</span>
   </a>

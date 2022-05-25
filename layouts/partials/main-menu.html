@@ -1,7 +1,13 @@
 {{ $thisPage := . }}
 
 <nav class="main-menu" role="navigation">
-  <button class="menu-button" aria-expanded="false" aria-controls="main-menu">
+  <button
+    class="menu-button"
+    aria-expanded="false"
+    aria-controls="main-menu"
+    title="{{ T "open-menu" }}"
+    data-close-menu="{{ T "close-menu" }}"
+    data-open-menu="{{ T "open-menu" }}">
     <i data-feather="menu"></i>
     <i data-feather="x"></i>
   </button>
