@@ -5,8 +5,8 @@ module.exports = {
     require('autoprefixer'),
     purgecss({
       content: [
-        './layouts/**/*.html',
-        './assets/scripts/**/*.js',
+        '../layouts/**/*.html',
+        '../assets/scripts/**/*.js',
       ],
       safelist: {
         standard: ['feather'],
