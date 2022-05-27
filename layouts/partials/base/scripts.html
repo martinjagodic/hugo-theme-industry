@@ -4,7 +4,7 @@
 {{ $cardSlider := resources.Get "/scripts/card-slider.js" | js.Build }}
 {{ $homePartners := resources.Get "/scripts/home-partners.js" | js.Build }}
 {{ $homeHero := resources.Get "/scripts/home-hero.js" | js.Build }}
-{{ $gallery := resources.Get "/scripts/gallery.js" | js.Build }}
+{{ $gallery := resources.Get "/scripts/gallery.js" | js.Build (dict "params" .Site.Params.lgLicenseKey) }}
 
 {{ $bundleItems := slice $lazyload $header $cardSlider $cookies $homePartners $homeHero $gallery }}
 
