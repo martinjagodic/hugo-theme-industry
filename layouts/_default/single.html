@@ -10,9 +10,10 @@
       </div>
     </div>
     {{ if .Params.showContactBanner }}
-      {{ partialCached "contact-banner" . }}
+      {{ partial "contact-banner" (dict
+        "context" .
+        "class" "section-margin-small-top"
+      ) }}
     {{ end }}
   </main>
-
-  {{ partialCached "contact-banner" . }}
 {{ end }}

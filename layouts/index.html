@@ -35,5 +35,8 @@
     {{ end }}
   </main>
 
-  {{ partialCached "contact-banner" . }}
+  {{ partial "contact-banner" (dict
+    "context" .
+    "class" "section-margin-small-top"
+  ) }}
 {{ end }}

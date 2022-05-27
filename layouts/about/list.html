@@ -12,7 +12,10 @@
       </div>
     </div>
 
-    {{ partialCached "contact-banner" . }}
+    {{ partial "contact-banner" (dict
+      "context" .
+      "class" "section-margin-small-top"
+    ) }}
 
     <div class="container grid no-gap section-margin-small-top">
       <h2 class="col-12 col-md-10 offset-md-1 col-xxl-8 offset-xxl-2 text-center">{{ T "people" }}</h2>
