@@ -3,11 +3,11 @@
   display: flex;
   align-items: center;
 
-  @include breakpoint-down("md") {
+  @include breakpoint-down("lg") {
     background-color: var(--brand);
   }
 
-  @include breakpoint-up("md") {
+  @include breakpoint-up("lg") {
     grid-row: 1 / 2;
     grid-column: 2 / 4;
     gap: 40px;
@@ -21,7 +21,7 @@
     align-items: center;
     gap: 8px;
 
-    @include breakpoint-down("md") {
+    @include breakpoint-down("lg") {
       display: none;
     }
 
@@ -33,7 +33,7 @@
   &__important {
     color: var(--brand);
 
-    @include breakpoint-down("md") {
+    @include breakpoint-down("lg") {
       display: flex !important;
       color: var(--text2);
 

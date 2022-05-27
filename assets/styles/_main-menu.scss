@@ -1,5 +1,5 @@
 .main-menu {
-  @include breakpoint-up("md") {
+  @include breakpoint-up("lg") {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
   }
@@ -18,7 +18,7 @@
     height: 100%;
     text-transform: uppercase;
 
-    @include breakpoint-down("md") {
+    @include breakpoint-down("lg") {
       position: absolute;
       top: var(--header-height);
       left: 0;
@@ -32,7 +32,7 @@
       border-top: 1px solid currentcolor;
     }
 
-    @include breakpoint-up("md") {
+    @include breakpoint-up("lg") {
       border-right: 1px solid currentcolor;
     }
   }
@@ -52,7 +52,7 @@
       background-color: var(--surface1);
     }
 
-    @include breakpoint-up("md") {
+    @include breakpoint-up("lg") {
       display: none;
     }
 
@@ -62,7 +62,7 @@
       }
     }
 
-    @include breakpoint-down("md") {
+    @include breakpoint-down("lg") {
       &[aria-expanded="false"] {
         .feather-x,
         + ul {
@@ -73,7 +73,7 @@
   }
 
   li {
-    @include breakpoint-up("md") {
+    @include breakpoint-up("lg") {
       height: 100%;
     }
   }
@@ -84,7 +84,7 @@
     align-items: center;
     padding: 20px var(--header-lr-padding);
 
-    @include breakpoint-up("md") {
+    @include breakpoint-up("lg") {
       height: 100%;
       padding: 0 var(--header-lr-padding);
     }
