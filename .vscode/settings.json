@@ -2,5 +2,20 @@
   "scss.validate": false,
   "less.validate": false,
   "css.validate": false,
-  "stylelint.validate": ["css", "scss"]
+  "markdown.experimental.validate.enabled": true,
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  "stylelint.snippet": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
 }
